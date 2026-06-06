@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: #f4efe6;
+  color: #211c16;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.rise { animation: rise .45s cubic-bezier(.2,.8,.2,1) both; }
+.tap { transition: transform .12s, background .15s, border-color .15s; }
+.tap:active { transform: scale(.98); }
+input:focus { outline: none; }
+details summary { list-style: none; }
+details summary::-webkit-details-marker { display: none; }
